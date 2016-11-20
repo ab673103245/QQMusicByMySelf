@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="48dp">
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:src="@drawable/ring_btnplay"
+        android:layout_width="48dp"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:text="随机播放全部"
+        android:layout_toRightOf="@id/iv1"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:textSize="18sp"
+        android:text="多选"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:src="@drawable/live_play_list_button"
+        android:layout_width="48dp"
+        android:padding="10dp"
+        android:layout_toLeftOf="@id/tv1"
+        android:layout_height="48dp" />
+
+</RelativeLayout>

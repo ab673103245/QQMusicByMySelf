@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/re1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#324053">
+
+        <ImageView
+            android:id="@+id/toolbar_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:padding="5dp"
+            android:src="@drawable/hwpush_ic_toolbar_advance" />
+
+        <TextView
+            android:id="@+id/toolbar_searchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="搜索"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_toLeftOf="@id/toolbar_searchText"
+            android:layout_toRightOf="@id/toolbar_back"
+            android:background="#0a3d76"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/iiv"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:src="@drawable/player_btn_pre_normal" />
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_toLeftOf="@id/iiv"
+                android:hint="夜空中最亮的星 G.E.M.邓紫棋"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <org.lenve.customshapeimageview.CustomShapeImageView
+            android:layout_width="56dp"
+            android:padding="9dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="17dp"
+            android:id="@+id/iv_albumpic_small"
+            android:layout_height="56dp" />
+       <LinearLayout
+           android:layout_centerVertical="true"
+           android:orientation="vertical"
+           android:layout_marginLeft="5dp"
+           android:layout_toRightOf="@id/iv_albumpic_small"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <TextView
+               android:id="@+id/tv_singgerName"
+               android:layout_width="wrap_content"
+               android:textSize="18sp"
+               android:textColor="@color/colorPrimary"
+               android:layout_toRightOf="@id/iv_albumpic_small"
+               android:layout_height="wrap_content" />
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:text="单曲:"
+                   android:textColor="@android:color/darker_gray"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+               <TextView
+                   android:id="@+id/tv_songCount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="000"
+                   android:textColor="@android:color/darker_gray" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="专辑:"
+                   android:layout_marginLeft="5dp"
+                   android:textColor="@android:color/darker_gray" />
+
+               <TextView
+                   android:id="@+id/tv_albumpicCount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="000"
+                   android:textColor="@android:color/darker_gray" />
+           </LinearLayout>
+
+       </LinearLayout>
+
+
+    </RelativeLayout>
+
+ <android.support.design.widget.TabLayout
+     android:id="@+id/tabLayout"
+     android:layout_width="match_parent"
+     android:background="#ea031a50"
+     app:tabIndicatorColor="@color/colorPrimary"
+     app:tabMode="fixed"
+     app:tabMinWidth="3dp"
+     app:tabSelectedTextColor="@color/colorPrimary"
+     app:tabTextColor="@android:color/darker_gray"
+     android:layout_height="48dp"></android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</LinearLayout>

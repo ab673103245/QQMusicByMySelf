@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_downmore"
+        android:layout_width="36dp"
+        android:padding="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/hwpush_ic_toolbar_advance"
+        android:layout_height="36dp" />
+
+    <ImageView
+        android:id="@+id/iv_addsong"
+        android:layout_width="36dp"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_toLeftOf="@id/iv_downmore"
+        android:layout_height="36dp" />
+
+    <!--android:ellipsize="end" 超过文本长度就显示...-->
+    <!--        跑马灯效果(注意在listView中显示跑马灯效果是要在java代码中添加一行的)
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                -->
+    <TextView
+        android:id="@+id/tv_songname"
+        android:textColor="@android:color/white"
+        android:layout_toLeftOf="@id/iv_addsong"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="3dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_singername"
+        android:layout_below="@id/tv_songname"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tv_albumname"
+        android:textColor="@android:color/darker_gray"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/tv_singername"
+        android:layout_below="@id/tv_songname"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

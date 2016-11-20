@@ -1,0 +1,1 @@
+include ':app', ':flexbox-0.2.3', ':lrcLibs', ':sharesdk'

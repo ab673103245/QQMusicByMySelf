@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/qqColor"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_downmore"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:padding="5dp"
+        android:src="@drawable/hwpush_ic_toolbar_advance" />
+
+    <TextView
+        android:id="@+id/tv_playcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/iv_downmore"
+        android:textColor="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/iv_sound"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/tv_playcount"
+        android:padding="7dp"
+        android:src="@android:drawable/checkbox_on_background" />
+
+    <TextView
+        android:id="@+id/tv_songname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_toLeftOf="@id/iv_sound"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/iv3"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/tv_songname"
+        android:layout_marginLeft="15dp"
+        android:padding="3dp"
+        android:src="@drawable/player_btn_pre_normal" />
+
+    <TextView
+        android:id="@+id/tv_singername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_songname"
+        android:layout_toRightOf="@id/iv3"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/iv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_songname"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_toRightOf="@id/tv_singername"
+        android:text="·"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tv_albumname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_songname"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/iv4"
+        android:textColor="@android:color/darker_gray" />
+
+</RelativeLayout>

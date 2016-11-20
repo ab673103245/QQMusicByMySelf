@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+<data>
+    <variable
+        name="music"
+        type="qianfeng.qqmusicbymyself.showmusic.model.bean.MusicBean">
+    </variable>
+</data>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="108dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+
+
+    android:orientation="vertical"
+    >
+
+        <!-- 如果使用ImageView，而图片资源是从网上下载的话，要使用自定义属性，用命名app:引入命名空间
+            然后，在java代码中，在javaBean这个类中，提供一个公有的静态返回值为void的方法，加上注解@BindingAdapter("bind:自定义属性名")
+        -->
+        <!-- app:albumpic_small="@{music.albumpic_small}"-->
+        <ImageView
+            android:id="@+id/iv_albumpic_small"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:padding="10dp"
+            />
+
+
+        <!-- android:text="@{music.songname??`<unknow>`}" -->
+        <TextView
+            android:id="@+id/tv_songname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/iv_albumpic_small"
+            android:ellipsize="end"
+            android:lines="2"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <!--android:text="@{music.singername??`<unknow>`}"-->
+        <TextView
+            android:id="@+id/tv_singername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_songname"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/iv_albumpic_small"
+            android:ellipsize="end"
+            android:lines="1"
+
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+</layout>
